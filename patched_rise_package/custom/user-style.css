@@ -1,0 +1,70 @@
+/* Target the block with the specific data-block-id */
+[data-block-id="cmh79kl1m0015357ibzr96u37"] {
+  color: #16a34a; /* Default text color (deep blue) */
+  transition: color 0.4s ease, transform 0.3s ease;
+}
+
+/* On hover or active state — optional visual enhancement */
+[data-block-id="cmh79kl1m0015357ibzr96u37"]:hover {
+  color: #16a34a; /* Bright green when hovered or active */
+  transform: scale(1.02); /* Slight zoom for animation effect */
+}
+
+/* If you specifically want it to change on click (not hover) */
+[data-block-id="cmh79kl1m0015357ibzr96u37"].active {
+  color: #16a34a; /* Green when clicked */
+  transform: scale(1.05);
+}
+
+/* Minimal Points HUD */
+#pointsHUD {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  z-index: 99999;
+  background: rgba(20,20,20,.9);
+  color: #fff;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1;
+  padding: 10px 12px;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0,0,0,.25);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  user-select: none;
+}
+
+#pointsHUD .ph-label { opacity: .8; }
+#pointsHUD .ph-value { font-weight: 700; font-variant-numeric: tabular-nums; }
+
+#pointsHUD.flash {
+  animation: ph-flash 600ms ease;
+}
+@keyframes ph-flash {
+  0%   { transform: scale(1);   box-shadow: 0 0 0 rgba(0,0,0,0); }
+  30%  { transform: scale(1.05); box-shadow: 0 10px 24px rgba(0,0,0,.35); }
+  100% { transform: scale(1);   box-shadow: 0 6px 20px rgba(0,0,0,.25); }
+}
+
+/* Small toast for +10 / +0 ping */
+#ph-toast {
+  position: fixed;
+  top: 60px;
+  right: 20px;
+  z-index: 100000;
+  background: #111;
+  color: #fff;
+  padding: 8px 10px;
+  border-radius: 8px;
+  font-size: 13px;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-8px);
+  transition: opacity .25s ease, transform .25s ease;
+}
+#ph-toast.show {
+  opacity: 1;
+  transform: translateY(0);
+}

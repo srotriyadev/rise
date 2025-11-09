@@ -1,0 +1,10 @@
+This SCORM package was successfully customized using RiseOverride™ by Override Labs Canada.
+
+Your course has been patched to include additional features and styling that go beyond Articulate Rise’s native capabilities.
+
+📁 Patched Folder: /custom/
+
+Thank you for using RiseOverride. 
+Visit overridelabs.ca or check for updates to stay current with new features and Pro Mode tools.
+
+— The Override Labs Team
